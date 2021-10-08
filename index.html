@@ -8,26 +8,29 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-    <div class = "start-line">
     <header class = "head">
 <!-- time and high score will be entered here -->
     </header>
     <br>
     <br>
     <div class = "wrap">
+        <div id = "start" class = "start-line">
         <!-- wraps around main info/quiz pages -->
-        <div class = "row">
-        <h2>The Coding Quiz of Knowledge</h2>
+            <div class = "row">
+                <h2>The Coding Quiz of Knowledge</h2>
+            </div>
+            <div class = "row">
+                <p>
+                Welcome to The Coding Quiz of Knowledge. You will be quizzed on your knowledge of JavaScript coding. 
+                Click the "Start Quiz" button to begin. Please try to answer the questions within the 100 second time limit. 
+                 Incorrect answers will penalize your time by 10 seconds. 
+                </p>
+                <button id = "start" class="first-btn" title="Start Quiz">Start Quiz</button>
+                <br>
+            </div>
+            </div>
         </div>
-        <div class = "row">
-        <p>Welcome to The Coding Quiz of Knowledge. You will be quizzed on your knowledge of JavaScript and coding. 
-        Click the "Start Quiz" button to begin. Please try to answer the questions within the 120 second time limit. 
-        Incorrect answers will penalize your time by 10 seconds. </p>
-        <br>
-    </div>
-        <button id = "start" class="first-btn" title="Start Quiz">Start Quiz</button>
-    </div>
-</div>
 <script src= "assets/script.js"></script>
+<script src= "assets/questionbase.js"></script>
 </body>
 </html>

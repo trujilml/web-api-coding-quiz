@@ -1,8 +1,7 @@
 # Web API Coding Quiz 
 
 ## Application Purpose 
-This website offers of coding quiz meant to quiz you on your knowledge of coding, consisting of multiple-choice questions and quick coding challenge scenarios.
-The quiz is timed, only allowing time for the user to quickly answer these questions. If the user were to answer one of the questions incorrectly, time will be removed from their clock. Once the user has answered all of the questions (or if the quiz time runs out), the quiz is over and their score is revealed. After, they will be allowed to save their score with their initals on the game leaderboard. From this, users are able to understand the knowledge from the coding quiz, see their progress which encourages them to replay the quiz game, and enhances their ability of coding and understanding coding concepts entirely. 
+This website offers of coding quiz meant to quiz you on your knowledge of JavaScript coding, consisting of multiple-choice questions and quick coding challenge scenarios. The quiz is timed, only allowing time for the user to quickly answer these questions. If the user were to answer one of the questions incorrectly, time will be removed from their clock. Once the user has answered all of the questions (or if the quiz time runs out), the quiz is over and their score is revealed. After, they will be allowed to save their score with their initals on the game leaderboard. From this, users are able to understand their JavaScript knowledge from the coding quiz, see their progress which encourages them to replay the quiz game, and enhances their ability of coding and understanding these basic concepts.
 
 ## User Story
 AS A coding boot camp student
