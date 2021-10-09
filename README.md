@@ -25,6 +25,6 @@ THEN I can save my initials and score -
 * HTML
 * CSS
 * JavaScript
-* Web APIs (Application Programming Interfaces) was used to create this interactive website. 
+* Web APIs (Application Programming Interfaces) was used to create this interactive website and figure out what exactly to solve to make the functions work!
 
 ## Screenshots
