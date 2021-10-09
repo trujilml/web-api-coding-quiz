@@ -9,12 +9,13 @@
 </head>
 <body>
     <header class = "head">
-<!-- time and high score will be entered here -->
+        <div class="highscores"><a href="highscore.html"><button id="highscore" class="highscore-btn" title="View Highscores">View Highscores</button></a></div>
+        <div class="time" id="timer"><span id="timer">0 Seconds</span></div>
     </header>
     <br>
     <br>
     <div class = "wrap">
-        <div id = "start" class = "start-line">
+        <div id = "startpage" class = "start-line">
         <!-- wraps around main info/quiz pages -->
             <div class = "row">
                 <h2>The Coding Quiz of Knowledge</h2>
@@ -28,6 +29,25 @@
                 <button id = "start" class="first-btn" title="Start Quiz">Start Quiz</button>
                 <br>
             </div>
+
+            <!-- hide class must be hidden in a function created by js - put it in the script page -->
+            <!-- choices should be 1-4, there are 10 questions total -->
+            <div id = "questions" class = "hide">
+            <h2 id = "question"></h2>
+            <div id = "choices" class="choices"></div> 
+            </div>
+
+            <!-- edit this particular class when needed and also once the functions start working! -->
+            <div id = "highscoreinput" class = "hide">
+            <h2>Great job!</h2>
+            <p>Your final score is <span id= "final-score"></span>!</p>
+            <p>Please enter your initials to submit your score in the highscore chart.
+            <input type="text" class="initials" max="3" /> 
+            <button id="submit" class="submit-btn" title="Submit Highscore">Submit</button>
+            </p>
+            </div>
+
+
             </div>
         </div>
 <script src= "assets/script.js"></script>

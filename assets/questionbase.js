@@ -1,7 +1,6 @@
 //lists all questions choices and answers in a variable - 4 choices max, 1 answer only
 //refer javascript questions from mod 3 and online sources highlighting javascript basics
 //10 questions - correct answers earn 15 points, incorrect answers lose 10 seconds on the timer running in the quiz
-//WRITE TWO MORE QUESTIONS
 
 var questions = [
     {
@@ -52,9 +51,16 @@ var questions = [
     answer: "//This is a comment in JavaScript!"
     },
 
+    {
+    question: "What operator is used to assign a value to a variable?",
+    choices: ["Nothing!","=", "?", "+="],
+    answer: "="
+    },
 
-
-    {},
-    {},
+    {
+    question: "Which boolean operator represents 'And'?",
+    choices: ["&&", "||", "?!", "*"],
+    answer: "&&"
+    },
 
 ];
