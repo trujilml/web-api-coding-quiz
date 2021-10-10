@@ -10,7 +10,7 @@
 <body>
     <header class = "head">
         <div class="highscores"><a href="highscore.html"><button id="highscore" class="highscore-btn" title="View Highscores">View Highscores</button></a></div>
-        <div class="time" id="timer"><span id="timer">0 Seconds</span></div>
+        <div class="time" id="timer"><span id="timer"></span></div>
     </header>
     <br>
     <br>
@@ -24,7 +24,7 @@
                 <p>
                 Welcome to The Coding Quiz of Knowledge. You will be quizzed on your knowledge of JavaScript coding. 
                 Click the "Start Quiz" button to begin. Please try to answer the questions within the 100 second time limit. 
-                 Incorrect answers will penalize your time by 10 seconds. 
+                Incorrect answers will penalize your time by 10 seconds. 
                 </p>
                 <button id = "start" class="first-btn" title="Start Quiz">Start Quiz</button>
                 <br>
@@ -32,9 +32,16 @@
 
             <!-- hide class must be hidden in a function created by js - put it in the script page -->
             <!-- choices should be 1-4, there are 10 questions total -->
-            <div id = "questions" class = "hide">
-            <h2 id = "question"></h2>
-            <div id = "choices" class="choices"></div> 
+            <div class = "container">
+            <div id = "question" class = "hide">
+            <h2 id = "questionTitle"></h2>
+            <div id = "choices" class="answer-choices">
+            <button class="btn-choice">Choice A.</button>
+            <button class="btn-choice">Choice B.</button>
+            <button class="btn-choice">Choice C.</button>
+            <button class="btn-choice">Choice D.</button>
+            </div> 
+            </div>
             </div>
 
             <!-- edit this particular class when needed and also once the functions start working! -->
@@ -42,7 +49,7 @@
             <h2>Great job!</h2>
             <p>Your final score is <span id= "final-score"></span>!</p>
             <p>Please enter your initials to submit your score in the highscore chart.
-            <input type="text" class="initials" max="3" /> 
+            <input type="text" class="initials" max="3"></textarea>
             <button id="submit" class="submit-btn" title="Submit Highscore">Submit</button>
             </p>
             </div>

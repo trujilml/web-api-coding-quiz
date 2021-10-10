@@ -27,4 +27,8 @@ THEN I can save my initials and score -
 * JavaScript
 * Web APIs (Application Programming Interfaces) was used to create this interactive website and figure out what exactly to solve to make the functions work!
 
+## Web Links
+* GitHub Repository - 
+* Deployed Link - 
+
 ## Screenshots

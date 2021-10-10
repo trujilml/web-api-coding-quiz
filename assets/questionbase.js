@@ -1,8 +1,9 @@
 //lists all questions choices and answers in a variable - 4 choices max, 1 answer only
 //refer javascript questions from mod 3 and online sources highlighting javascript basics
 //10 questions - correct answers earn 15 points, incorrect answers lose 10 seconds on the timer running in the quiz
+//may move to script.js, switched to a const like last project
 
-var questions = [
+const questions = [
     {
     question: "Arrays are a special type of objects in JavaScript. What can they store exactly in them?",
     choices: ["Strings", "Booleans", "Other arrays", "All of the Above"],

@@ -2,6 +2,7 @@
 //house question loop of questions and continute on the next one
 // may be housed with script js if applicable
 var totalScore = 0;
+var correctAnswer = 20;
 var highestScore = 200;
 
 //total score is alltogether amount added by the multiple functions
@@ -12,22 +13,33 @@ var highestScore = 200;
 //0 - 200 points for the questions
 //0 - 100 seconds for the timer 
 
+//should come from questionbase . js file
+function getNewQuestions(){
+
+    for (var i = 0; i < questions.length; i++) {
+        getNewQuestions.textContent = questions;
+        answer = questions.choices;
+    }
+
+};
+
+
 var score = function() {
-    if(this.getNewQuestions().rightAnswer(answer)) {
-    rightAnswer.innerHTML = "Correct!";
-    totalScore += 20;
-}   else if (!this.getNewQuestions().rightAnswer(answer)) {
-    rightAnswer.innerHTML = "Incorrect!";
+    if(this.getNewQuestions().questions(answer)) {
+        correctAnswer.innerHTML = "Correct!";
+    totalScore += correctAnswer;
+}   else if (!this.getNewQuestions().questions(answer)) {
+    correctAnswer.innerHTML = "Incorrect!";
     wrongTimer();
 }
-getNewQuestions();
-}
+};
 
 function saveHighscore() {};
 
 
 function clearHighscores() {};
 
-document.getElementById("clear").onclick = clearHighscores;
 
-// var questions 
+document.getElementById("submit").onClick = saveHighscore;
+
+document.getElementById("clear").onclick = clearHighscores;
