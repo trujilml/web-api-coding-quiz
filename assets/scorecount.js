@@ -19,6 +19,7 @@ function getNewQuestions(){
     for (var i = 0; i < questions.length; i++) {
         getNewQuestions.textContent = questions;
         answer = questions.choices;
+        answer = saveAnswer;
     }
 
 };
@@ -30,11 +31,23 @@ var score = function() {
     totalScore += correctAnswer;
 }   else if (!this.getNewQuestions().questions(answer)) {
     correctAnswer.innerHTML = "Incorrect!";
-    wrongTimer();
+    timeLeft = timeLeft-wrongAnswerTime;
 }
 };
 
-function saveHighscore() {};
+saveHighscore.addEventListener("click", function() {
+    var localQuizStorage = "quizscore";
+    var userInitials = "";
+    var value = []; 
+
+    userInitals = localQuizStorage + highestScore.value;
+    value = [userInitials, highestScore]
+
+    if (!localStorage.length) {
+    localStorage.setItem("quiz", "quiz");
+    }
+});
+
 
 
 function clearHighscores() {};
@@ -42,4 +55,4 @@ function clearHighscores() {};
 
 document.getElementById("submit").onClick = saveHighscore;
 
-document.getElementById("clear").onclick = clearHighscores;
+document.getElementById("clear").onClick = clearHighscores;

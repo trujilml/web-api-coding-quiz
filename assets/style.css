@@ -10,6 +10,7 @@ body {
     font-size: 20px;
 }
 
+/* for index.html */
 .wrap {
     display: flex;
     flex-direction: row;
@@ -44,12 +45,17 @@ body {
 }
 
 /* for all button sources on both html pages */
-.highscore-btn, .first-btn, .btn-choice, .submit-btn, .back-btn, .clear-btn {
+.highscore-btn, .first-btn, .btn-choice, .submit-btn, .submitchoice-btn, .next-btn, .back-btn, .clear-btn {
     background-color: white;
     border-radius: 25px;
     border-width: 5px;
     border-color: silver;
     appearance: none;
+}
+
+/* for hidden elements - questions and answer selection */
+.hide {
+    display: none;
 }
 
 /* for hidden submit initial text area box */

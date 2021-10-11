@@ -35,11 +35,16 @@
             <div class = "container">
             <div id = "question" class = "hide">
             <h2 id = "questionTitle"></h2>
+            <div><span id = "user-score"></span></div>
             <div id = "choices" class="answer-choices">
             <button class="btn-choice">Choice A.</button>
             <button class="btn-choice">Choice B.</button>
             <button class="btn-choice">Choice C.</button>
             <button class="btn-choice">Choice D.</button>
+            <button id="submit-it" class="submitchoice-btn hide" title="Submit Question">Submit</button>
+            <button id ="next" class="next-btn hide" title="Next Question">Next</button>
+            <!-- not sure if hide element will work for these buttons -->
+
             </div> 
             </div>
             </div>
@@ -47,7 +52,7 @@
             <!-- edit this particular class when needed and also once the functions start working! -->
             <div id = "highscoreinput" class = "hide">
             <h2>Great job!</h2>
-            <p>Your final score is <span id= "final-score"></span>!</p>
+            <p>Your final score is <span id= "finalscore"></span>!</p>
             <p>Please enter your initials to submit your score in the highscore chart.
             <input type="text" class="initials" max="3"></textarea>
             <button id="submit" class="submit-btn" title="Submit Highscore">Submit</button>
@@ -58,6 +63,5 @@
             </div>
         </div>
 <script src= "assets/script.js"></script>
-<script src= "assets/questionbase.js"></script>
 </body>
 </html>
