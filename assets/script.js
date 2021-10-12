@@ -18,12 +18,12 @@ const backButton = document.getElementById("back");
 const nextButton = document.getElementById("next");
 // const submitAnswerButton = document.getElementById("submit-it");
 const submitButton = document.getElementById("submit");
-const clearScoreButton = document.getElementById("clear");
+const clearButton = document.getElementById("clear");
 
-const question = document.getElementById("questions");
+// const questions = document.getElementById("questions");
 const choices = document.getElementById("choices");
 
-let getNewQuestions;
+let getNewQuestions, randomizeQuestionFormat;
 
 var questions = [
 
@@ -102,39 +102,105 @@ var questions = [
 
 //timer displays time but does not currently function 
 var timeLeft = 100;
-var wrongAnswerTime = 10; 
+var wrongAnswerTime = -10; 
 
 function timer() {
     setInterval(function() { 
     document.getElementById("timer").innerHTML=timeLeft + " seconds";
     }), 1000; //1000 milliseconds allow for timeLeft to run its respective 100 seconds
 }
-    // function wrongTimer () {
-    //     var wrongAnswerTime = 10; 
-    //     timeLeft = timeLeft-wrongAnswerTime;
-    //     return;
-    // }
-
-
-    if (timeLeft === 0) {
-        alert("GAME OVER!")
-    };
+ if (timeLeft === 0) {
+    alert("GAME OVER!")
+};
 
 function startQuiz() {
     startButton.classList.add("hide");
+    randomizeQuestionFormat = questions.sort(() => Math.random() - 2); //change if question size is too big
+    questions.classList.remove("hide");
+    getNewQuestions = 0;
+    nextNewQuestion();
     nextButton.classList.remove("hide");
 }
 
-//may need to implent scorecount js file into script js after all in order to make this all work
+
+function nextNewQuestion() {
+    score(randomizeQuestionFormat[nextNewQuestion]);
+}
+
+
+var totalScore = 0;
+var correctAnswer = 20;
+var highestScore = 200;
+
+function score(questions){
+
+     for (var i = 0; i < questions.length; i++) {
+         score.textContent = questions;
+         if (answer.correct) {
+            correctAnswer.innerHTML = "Correct!";
+             totalScore += correctAnswer;
+             nextButton.dataset.correct = answer.correct
+         }
+         if (!answer.correct) {
+            correctAnswer.innerHTML = "Incorrect!";
+            timeLeft -= wrongAnswerTime;
+           timeLeft = timeLeft-wrongAnswerTime;
+         }
+        }
+};
+
+
+
+
+
+// var score = function() {
+//     if(this.getNewQuestions().questions(answer)) {
+//         correctAnswer.innerHTML = "Correct!";
+//     totalScore += correctAnswer;
+// }   else if (!this.getNewQuestions().questions(answer)) {
+//     correctAnswer.innerHTML = "Incorrect!";
+//     timeLeft = timeLeft-wrongAnswerTime;
+// }
+// };
+
+
+function saveHighscore() {
+
+    var localQuizStorage = "quizscore";
+    var userInitials = "";
+    var value = totalScore; 
+
+    userInitals = localQuizStorage + totalScore.value;
+    value = [userInitials, totalScore]
+
+    if (!localStorage.length) {
+    localStorage.setItem(userInitials, "quizscore"[totalScore]);
+    }
+
+    document.getElementById("submit").onclick = saveHighscore;
+}
+
+
+
+// function clearHighscores() {
+//     window.localStorage.removeItem(userInitials, "quizscore"[totalScore]);
+//     window.location.reload();
+
+//     document.getElementById("clear").onclick = clearHighscores;
+// }
+
+
+
 
 startButton.addEventListener = ("click", startQuiz);
 startButton.addEventListener = ("click", timer);
 
-// return totalScore();
-// // or called finalScore ??? 
-
 // submitAnswerButton.onclick = saveAnswer;
 
 submitButton.onclick = saveHighscore; 
+saveHighscore();
+// clearButton.onclick = clearHighscores;
+// clearHighscores();
 
 // console.log(startQuiz());
+// startQuiz();
