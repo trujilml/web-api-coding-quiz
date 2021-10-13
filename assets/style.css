@@ -10,19 +10,30 @@ body {
     font-size: 20px;
 }
 
-/* for index.html */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.highscores a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.highscores a:active {
+    color: black;
+}
+
+.highscores a:visited {
+    color: black;
+}
+
 .wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-/* for highscore.html */
-.wrap2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .row {
@@ -38,27 +49,23 @@ body {
     padding: 20px;
 }
 
-.head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-/* for all button sources on both html pages */
-.highscore-btn, .first-btn, .btn-choice, .submit-btn, .submitchoice-btn, .next-btn, .back-btn, .clear-btn {
+/* for all button sources, button source for quiz choice is the first one */
+button, .highscore-btn, .first-btn, .btn-choice, .submit-btn, .next-btn, .reset-btn, .clear-btn {
     background-color: white;
     border-radius: 25px;
-    border-width: 5px;
+    border-width: 3px;
+    font-size: 20px;
     border-color: silver;
     appearance: none;
 }
 
-/* for hidden elements - questions and answer selection */
-.hide {
-    display: none;
+/* for hover effect - handles all buttons */
+button:hover, .highscore-btn:hover, .first-btn:hover, .btn-choice:hover, .submit-btn:hover, .next-btn:hover, .reset-btn:hover, .clear-btn:hover {
+    background-color: lightgray;
+    color: white;
 }
 
-/* for hidden submit initial text area box */
+/* for submit initial text area box */
 .initials {
     background-color: white;
     border-radius: 25px;
