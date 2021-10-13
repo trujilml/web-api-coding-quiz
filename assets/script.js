@@ -1,5 +1,10 @@
 //lists all questions choices and answers in a variable - 4 choices max, 1 answer only
 //B is a choice never used for the questions correct answer at all! 
+//min totalscore of quiz is 0, maximum score user makes is up to 400
+var totalScore = 0;
+var nextQuestion = -1; 
+var timeLeft = 0;
+var quizTimer;
 
 const questions = [
 
@@ -67,14 +72,8 @@ const questions = [
     },
 
 ]
-//min totalscore of quiz is 0, maximum score user makes is up to 400
-var totalScore = 0;
-var nextQuestion = -1; 
-var timeLeft = 0;
-var quizTimer;
 
 //timer is housed in with start quiz function to initiate timer with the questions appearing, therefore starting the quiz officially 
-
 function startQuiz() {
 
     timeLeft = 100;
@@ -86,9 +85,9 @@ function startQuiz() {
         if (timeLeft <= 0) {
             clearInterval(quizTimer);
             window.alert("THE QUIZ IS OVER!");
-            quizOver(); //1000 milliseconds allow for timeLeft to run its respective 100 seconds
+            quizOver(); 
         }
-        }, 1000);
+        }, 1000); //1000 milliseconds allow for timeLeft to run its respective 100 seconds
 
         nextNewQuestion();
     }
