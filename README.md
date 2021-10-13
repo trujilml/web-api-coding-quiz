@@ -25,7 +25,7 @@ THEN I can save my initials and score -
 * HTML
 * CSS
 * JavaScript
-* Web APIs (Application Programming Interfaces) was used to create this interactive website and figure out what exactly to solve to make the functions work!
+* Web APIs (Application Programming Interfaces) was used to establish this interactive website and to ensure that all the functions were working correctly, alongside seeing localStorage get and set the highscore function given from the user's recent playthrough of the game.
 
 ## Web Links
 * GitHub Repository - 

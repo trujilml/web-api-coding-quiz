@@ -1,7 +1,3 @@
-
-//game timer only lasts 100 seconds, incorrect answers recieve a loss of 20 seconds for the user
-//100000 milliseconds for 100 seconds - timer, timeleft
-
 //lists all questions choices and answers in a variable - 4 choices max, 1 answer only
 //B is a choice never used for the questions correct answer at all! 
 
@@ -77,6 +73,8 @@ var nextQuestion = -1;
 var timeLeft = 0;
 var quizTimer;
 
+//timer is housed in with start quiz function to initiate timer with the questions appearing, therefore starting the quiz officially 
+
 function startQuiz() {
 
     timeLeft = 100;
@@ -98,7 +96,7 @@ function startQuiz() {
 //last page - users three initals is saved on local storage as MVP and their score as highscore respectively
 function quizOver() {
     clearInterval(quizTimer);
-
+//var finalquizdetails invokes the html page and hidden details including the final score details here, the questions and answer choices, and the restart page of the original start page
     var finalQuizDetails = `
     <h2>Great job!</h2>
     <p>Your final score is ` + totalScore + `!</p>
@@ -109,7 +107,7 @@ function quizOver() {
     document.getElementById("startpage").innerHTML = finalQuizDetails;
 }
 
-
+//demonstrates player highscore saved in their own localstorage
 function saveHighscore() {
     localStorage.setItem("Highscore", totalScore);
     localStorage.setItem("MVP", document.getElementById('MVP').value);
@@ -117,6 +115,7 @@ function saveHighscore() {
     getHighscore();
 }
 
+//after player saves highscore, turns into special page that allows user to either clear score and play again or simply play again without affecting their score on localstorage
 function getHighscore() {
     var finalQuizDetails = `
     <h2>` + localStorage.getItem("MVP") + `'s highscore is:</h2>
@@ -140,7 +139,7 @@ function clearHighscore(){
 //reset function puts user back to the beginning page and allows them to play the quiz again!
 function resetGame() {
     clearInterval(quizTimer);
-    score = 0;
+    totalScore = 0;
     nextQuestion = -1;
     timeLeft = 0;
     quizTimer = null;
@@ -159,16 +158,19 @@ function resetGame() {
     document.getElementById("startpage").innerHTML = finalQuizDetails;
 }
 
+//wrong answer reduces time by 25 seconds
 function wrongAnswer() {
     timeLeft -= 25;
     nextNewQuestion();
 }
 
+//correct answer grants the user 40 points/ maxmimum user high score is 400!
 function correctAnswer() {
     totalScore += 40;
     nextNewQuestion();
 }
 
+//officially initates the question const and ensures correct answers are chosed, linking them to the above functions
 function nextNewQuestion() {
     nextQuestion++;
 
