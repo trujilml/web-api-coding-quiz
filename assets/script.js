@@ -85,7 +85,7 @@ function startQuiz() {
         document.getElementById("timeLeft").innerHTML=timeLeft + " seconds";
         if (timeLeft <= 0) {
             clearInterval(quizTimer);
-            window.alert("THE QUIZ IS OVER!");
+            window.alert("TIME IS UP! THE QUIZ IS OVER!");
             quizOver(); 
         }
         }, 1000); //1000 milliseconds allow for timeLeft to run its respective 100 seconds
@@ -158,15 +158,15 @@ function wrongAnswer() {
     if (timeLeft < 0) {
         timeLeft = 0;
     }
-    feedbackEl.textContent = "WRONG!";
+    feedbackEl.textContent = "WRONG! The answer was: " + questions[nextQuestion].answer;
     feedbackEl.style.color = "red";
     feedbackEl.style.fontWeight = "bold";
-    feedbackEl.style.fontSize = "200%";
+    feedbackEl.style.fontSize = "100%";
 
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function() {
     feedbackEl.setAttribute("class", "hide");
-    }, 1000);
+    }, 1500);
 
     nextNewQuestion();
 
@@ -177,15 +177,15 @@ function wrongAnswer() {
 function correctAnswer() {
     totalScore += 40;
 
-    feedbackEl.textContent = "CORRECT!";
+    feedbackEl.textContent = "CORRECT! That was the right answer: " + questions[nextQuestion].answer;
     feedbackEl.style.color = "green";
     feedbackEl.style.fontWeight = "bold";
-    feedbackEl.style.fontSize = "200%";
+    feedbackEl.style.fontSize = "100%";
 
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function() {
     feedbackEl.setAttribute("class", "hide");
-    }, 1000);
+    }, 1500);
 
     nextNewQuestion();
 

@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: azure;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(131,234,255,1) 0%, rgba(208,248,251,1) 47%, rgba(131,234,255,1) 100%);
     font-family: Helvetica, Arial, sans-serif;
     line-height: 2;
     font-size: 20px;
@@ -50,26 +51,32 @@ header {
     padding: 20px;
 }
 
+/* for hide setting on feedback back appears when question answer is correct or incorrect */
+.hide {
+    display: none;
+}
+
 /* for all button sources, button source for quiz choice is the first one */
 button, .highscore-btn, .first-btn, .btn-choice, .submit-btn, .next-btn, .reset-btn, .clear-btn {
     background-color: white;
     border-radius: 25px;
     border-width: 3px;
     font-size: 20px;
-    border-color: silver;
+    border-color: rgb(2, 204, 255);
     appearance: none;
 }
 
 /* for hover effect - handles all buttons */
 button:hover, .highscore-btn:hover, .first-btn:hover, .btn-choice:hover, .submit-btn:hover, .next-btn:hover, .reset-btn:hover, .clear-btn:hover {
-    background-color: lightgray;
-    color: white;
+    background-color: rgb(219, 248, 255);
+    color: rgb(2, 204, 255);
 }
 
 /* for submit initial text area box */
 .initials {
     background-color: white;
     border-radius: 25px;
+    border-color: rgb(2, 204, 255);
     margin: 10px;
     padding: 10px, 5px;
     appearance: none;
