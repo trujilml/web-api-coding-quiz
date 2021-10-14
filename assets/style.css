@@ -19,6 +19,7 @@ header {
 .highscores a {
     text-decoration: none;
     list-style: none;
+    color: black;
 }
 
 .highscores a:active {

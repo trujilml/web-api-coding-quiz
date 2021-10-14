@@ -10,9 +10,9 @@
 <body>
     <header>
         <div id = "highscore" class="highscores">
-            <a onclick = "getHighscore()" href=#><h3>View Highscores</h3></a>
+            <a onclick = "getHighscore()" href=# title = "View Highscores"><h3>View Highscores</h3></a>
         </div>
-        <div  id="timer" class="time">
+        <div id="timer" class="time">
             <h3>Time Left:  <span id="timeLeft">0</span></h3>
         </div>
     </header>
@@ -31,11 +31,11 @@
                         Click the "Start Quiz" button to begin. Please try to answer the questions within the 100 second time limit. 
                         Correct answers give you 40 points! Incorrect answers will penalize your time by 25 seconds! Have fun!
                     </p>
-                    <button onclick = "startQuiz()" class = "submit-btn">Start Quiz</button>
+                    <button onclick = "startQuiz()" class = "submit-btn" title = "Start Coding Quiz">Start Quiz</button>
                 <br>    
                 </div>
             </div>
-
+            <div id="feedback" class="hide"></div>
     </div>
 
 <script src= "assets/script.js"></script>

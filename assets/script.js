@@ -5,8 +5,7 @@ var totalScore = 0;
 var nextQuestion = -1; 
 var timeLeft = 0;
 var quizTimer;
-var feedbackEl = document.getElementById("feedback");
-
+var feedbackEl = document.querySelector("#feedback");
 
 const questions = [
 
@@ -103,7 +102,7 @@ function quizOver() {
     <p>Your final score is ` + totalScore + `!</p>
     <p>Please enter your initials to submit your score in the highscore chart.</p>
     <input type="text" id="MVP" class="initials" maxlength="3" required>
-    <button onclick="saveHighscore()" class="highscore-btn">Submit</button>`;
+    <button onclick="saveHighscore()" class="highscore-btn" title="Submit Highscore">Submit</button>`;
 
     document.getElementById("startpage").innerHTML = finalQuizDetails;
 }
@@ -122,8 +121,8 @@ function getHighscore() {
     <h2>` + localStorage.getItem("MVP") + `'s highscore is:</h2>
     <h1>` + localStorage.getItem("Highscore") + `</h1><br >
 
-    <button onclick="clearHighscore()" class="clear-btn">Clear Score and Play Again!</button>
-    <button onclick="resetGame()" class="reset-btn">Just Play Again!</button>
+    <button onclick="clearHighscore()" class="clear-btn" title = "Clear Score and Play Again!">Clear Score and Play Again!</button>
+    <button onclick="resetGame()" class="reset-btn" title = "Just Play Again!">Just Play Again!</button>
 
     `;
     document.getElementById("startpage").innerHTML = finalQuizDetails;
@@ -155,13 +154,41 @@ function resetGame() {
 //wrong answer reduces time by 25 seconds
 function wrongAnswer() {
     timeLeft -= 25;
+
+    if (timeLeft < 0) {
+        timeLeft = 0;
+    }
+    feedbackEl.textContent = "WRONG!";
+    feedbackEl.style.color = "red";
+    feedbackEl.style.fontWeight = "bold";
+    feedbackEl.style.fontSize = "200%";
+
+    feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function() {
+    feedbackEl.setAttribute("class", "hide");
+    }, 1000);
+
     nextNewQuestion();
+
 }
+
 
 //correct answer grants the user 40 points/ maxmimum user high score is 400!
 function correctAnswer() {
     totalScore += 40;
+
+    feedbackEl.textContent = "CORRECT!";
+    feedbackEl.style.color = "green";
+    feedbackEl.style.fontWeight = "bold";
+    feedbackEl.style.fontSize = "200%";
+
+    feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function() {
+    feedbackEl.setAttribute("class", "hide");
+    }, 1000);
+
     nextNewQuestion();
+
 }
 
 //officially initates the question const and ensures correct answers are chosed, linking them to the above functions
