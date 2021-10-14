@@ -5,6 +5,8 @@ var totalScore = 0;
 var nextQuestion = -1; 
 var timeLeft = 0;
 var quizTimer;
+var feedbackEl = document.getElementById("feedback");
+
 
 const questions = [
 
@@ -145,14 +147,7 @@ function resetGame() {
 
     document.getElementById("timeLeft").innerHTML=timeLeft + " seconds";
 
-    var finalQuizDetails = `
-    <h2>The Coding Quiz of Knowledge</h2>
-    <p>
-    Welcome to The Coding Quiz of Knowledge. You will be quizzed on your knowledge of JavaScript coding. 
-    Click the "Start Quiz" button to begin. Please try to answer the questions within the 100 second time limit. 
-    Correct answers give you 40 points! Incorrect answers will penalize your time by 25 seconds! Have fun!
-    </p>
-    <button onclick = "startQuiz()" class = "submit-btn">Start Quiz</button>`;
+    window.location.reload();
 
     document.getElementById("startpage").innerHTML = finalQuizDetails;
 }
@@ -179,7 +174,6 @@ function nextNewQuestion() {
     }
 
     var finalQuizDetails = "<h2>" + questions[nextQuestion].questionTitle + "</h2>"
-
 
     for (var i = 0; i < questions[nextQuestion].choices.length; i++) {
         var choiceButton = "<button onclick = \"[answerchoice]\">[CHOICE]</button>";
