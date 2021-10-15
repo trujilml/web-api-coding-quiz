@@ -16,13 +16,13 @@ This is a coding quiz meant to quiz you on your knowledge of JavaScript coding c
 ## Screenshots
 The screenshots present the welcome page, an example of an question - unanswered, a question with an example of a correct answer from the previous question, and a question with an example of a wrong answer, the concluded quiz page where the user is prompted to enter their initials to save their highscore, the user's highscore, and a "Time's Up" alert when the user runs out of time in their quiz. 
 
-![Screenshot 1] (./assets/screenshots/webapicodequiz-1.png)
-![Screenshot 2] (./assets/screenshots/webapicodequiz-2.png)
-![Screenshot 3] (./assets/screenshots/webapicodequiz-3.png)
-![Screenshot 4] (./assets/screenshots/webapicodequiz-4.png)
-![Screenshot 5] (./assets/screenshots/webapicodequiz-5.png)
-![Screenshot 6] (./assets/screenshots/webapicodequiz-6.png)
-![Screenshot 7] (./assets/screenshots/webapicodequiz-7.png)
+![Screenshot 1](./assets/screenshots/webapicodequiz-1.png)
+![Screenshot 2](./assets/screenshots/webapicodequiz-2.png)
+![Screenshot 3](./assets/screenshots/webapicodequiz-3.png)
+![Screenshot 4](./assets/screenshots/webapicodequiz-4.png)
+![Screenshot 5](./assets/screenshots/webapicodequiz-5.png)
+![Screenshot 6](./assets/screenshots/webapicodequiz-6.png)
+![Screenshot 7](./assets/screenshots/webapicodequiz-7.png)
 
 ## Special Thanks
 Special thanks to Joshua from my bootcamp coding course! He was able to help me out on the implementation of the correct and incorrect indicators for the answered questions. Thank you very much!!
